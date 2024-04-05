@@ -6,27 +6,30 @@ public class Main {
         Rectangle rect2 = new Rectangle(20, 20);
         Circle cicr1 = new Circle(1.18);
         Triangle tr1 = new Triangle(5.2,4.5,6.87);
-        if (rect1.whosAreaBigger(rect1, rect2)) System.out.println("Yes"); else System.out.println("NO");
-        if (rect1.whosAreaBigger(rect1, tr1)) System.out.println("Yes"); else System.out.println("NO");
-        if (rect1.whosAreaBigger(rect1, cicr1)) System.out.println("Yes"); else System.out.println("NO");
+       // if (rect1.whosAreaBigger(rect1, rect2)) System.out.println("Yes"); else System.out.println("NO");
+      //  if (rect1.whosAreaBigger(rect1, tr1)) System.out.println("Yes"); else System.out.println("NO");
+       // if (rect1.whosAreaBigger(rect1, cicr1)) System.out.println("Yes"); else System.out.println("NO");
 
-        if (rect2.whosAreaBigger(rect2, rect1)) System.out.println("Yes"); else System.out.println("NO");
-        if (rect2.whosAreaBigger(rect2, tr1)) System.out.println("Yes"); else System.out.println("NO");
-        if (rect2.whosAreaBigger(rect2, cicr1)) System.out.println("Yes"); else System.out.println("NO");
+       // if (rect2.whosAreaBigger(rect2, rect1)) System.out.println("Yes"); else System.out.println("NO");
+       // if (rect2.whosAreaBigger(rect2, tr1)) System.out.println("Yes"); else System.out.println("NO");
+       // if (rect2.whosAreaBigger(rect2, cicr1)) System.out.println("Yes"); else System.out.println("NO");
 
-        if (tr1.whosAreaBigger(tr1, rect2)) System.out.println("Yes"); else System.out.println("NO");
-        if (tr1.whosAreaBigger(tr1, rect1)) System.out.println("Yes"); else System.out.println("NO");
-        if (tr1.whosAreaBigger(tr1, cicr1)) System.out.println("Yes"); else System.out.println("NO");
+       // if (tr1.whosAreaBigger(tr1, rect2)) System.out.println("Yes"); else System.out.println("NO");
+      //  if (tr1.whosAreaBigger(tr1, rect1)) System.out.println("Yes"); else System.out.println("NO");
+      //  if (tr1.whosAreaBigger(tr1, cicr1)) System.out.println("Yes"); else System.out.println("NO");
 
-        if (cicr1.whosAreaBigger(cicr1, rect2)) System.out.println("Yes"); else System.out.println("NO");
-        if (cicr1.whosAreaBigger(cicr1, tr1)) System.out.println("Yes"); else System.out.println("NO");
-        if (cicr1.whosAreaBigger(cicr1, rect1)) System.out.println("Yes"); else System.out.println("NO");
+      //  if (cicr1.whosAreaBigger(cicr1, rect2)) System.out.println("Yes"); else System.out.println("NO");
+       // if (cicr1.whosAreaBigger(cicr1, tr1)) System.out.println("Yes"); else System.out.println("NO");
+       // if (cicr1.whosAreaBigger(cicr1, rect1)) System.out.println("Yes"); else System.out.println("NO");
 
 
 
         Figure [] arrayOfFigures = new Figure[]{rect1, rect2, tr1, cicr1};
         for (Figure f:arrayOfFigures){
-            if(f.whosAreaBigger(f,))
+            for (Figure g:arrayOfFigures)
+                if (f!=g)
+                    if(g.whosAreaBigger(f,g)) System.out.println("Yes"); else System.out.println("NO");
+
         }
 
     }
