@@ -28,7 +28,7 @@ public class Main {
         for (Figure f:arrayOfFigures){
             for (Figure g:arrayOfFigures)
                 if (f!=g)
-                    if(g.whosAreaBigger(f,g)) System.out.println("Yes"); else System.out.println("NO");
+                    if(Figure.whosAreaBigger(f,g)) System.out.println("Yes"); else System.out.println("NO");
 
         }
 
@@ -38,7 +38,7 @@ class Figure {
     public double calcArea (){
         return 0;
     }
-    public boolean whosAreaBigger (Figure a, Figure b){
+    public static  boolean whosAreaBigger (Figure a, Figure b){
         double c = a.calcArea(); double d = b.calcArea();
         return c > d;
     }
@@ -69,17 +69,27 @@ class Rectangle extends Figure{
     }
 }
 class Triangle extends Figure{
-    double AB, BC, CA;
+    double sideAB, sideBC, sideCA;
 
-    public Triangle(double AB, double BC, double CA) {
-        this.AB = AB;
-        this.BC = BC;
-        this.CA = CA;
+    public Triangle(double sideAB, double sideBC, double sideCA) {
+        if(sideAB<(sideBC+sideCA)&&sideBC<(sideAB+sideCA)&&sideCA<(sideAB+sideBC)) {
+            this.sideAB = sideAB;
+            this.sideBC = sideBC;
+            this.sideCA = sideCA;
+        }
+        else {
+            System.out.println("такого треугольника не существует, введи стороны так, чтобы соблюдалось правило неравенства треугольника ");
+            this.sideAB = 0;
+            this.sideBC = 0;
+            this.sideCA = 0;
+        }
     }
 
     @Override
     public double calcArea() {
-        double p= (AB+BC+CA)/2;
-        return Math.sqrt(p*(p-AB)*(p-BC)*(p-CA));
+        double p= (sideAB+sideBC+sideCA)/2;
+        return Math.sqrt(p*(p-sideAB)*(p-sideBC)*(p-sideCA));
     }
 }
+
+
