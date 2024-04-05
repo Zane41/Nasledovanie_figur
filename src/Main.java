@@ -22,6 +22,13 @@ public class Main {
         if (cicr1.whosAreaBigger(cicr1, tr1)) System.out.println("Yes"); else System.out.println("NO");
         if (cicr1.whosAreaBigger(cicr1, rect1)) System.out.println("Yes"); else System.out.println("NO");
 
+
+
+        Figure [] arrayOfFigures = new Figure[]{rect1, rect2, tr1, cicr1};
+        for (Figure f:arrayOfFigures){
+            if(f.whosAreaBigger(f,))
+        }
+
     }
 }
 class Figure {
